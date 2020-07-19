@@ -1,0 +1,49 @@
+<div class="login">
+  <div *ngIf="auth.user | async as user">
+     <p>
+       <span style="margin-left: 20%;" class="tag is-dark">{{ user.displayName }}</span>
+     </p>
+  </div>
+</div>  
+
+
+<mat-card>
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Programming Languages
+      </mat-panel-title>
+      <mat-panel-description>
+        Computer Languages
+      </mat-panel-description>
+    
+    </mat-expansion-panel-header>
+    <mat-list role="list">
+      <mat-list-item role="listitem" [routerLink] = "'/javascript'" style="cursor:pointer;">JavaScript</mat-list-item>
+      <mat-list-item role="listitem" [routerLink] = "'/quiz'" style="cursor:pointer;">C++</mat-list-item>
+      <mat-list-item role="listitem" [routerLink] = "'/quiz'" style="cursor:pointer;">Java</mat-list-item>
+    </mat-list>
+
+  </mat-expansion-panel>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Web Development
+      </mat-panel-title>
+      <mat-panel-description>
+        Build WebSite
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-list role="list">
+      <mat-list-item role="listitem">HTML</mat-list-item>
+      <mat-list-item role="listitem">CSS</mat-list-item>
+      <mat-list-item role="listitem">Javascript</mat-list-item>
+      <mat-list-item role="listitem">PHP</mat-list-item>
+      <mat-list-item role="listitem">Angular</mat-list-item>
+      <mat-list-item role="listitem">React</mat-list-item>
+    </mat-list>
+  </mat-expansion-panel>
+</mat-accordion>
+</mat-card>

@@ -1,0 +1,14 @@
+{
+  "firestore": {
+    "rules": "firebase.rules.json",
+    "indexes": "firebase.indexes.json"
+  },
+  "hosting": {
+    "public": "dist/SIAquiz",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
